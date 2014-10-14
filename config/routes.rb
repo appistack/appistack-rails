@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  # authenticating users outside of /api/v1 scope
+  mount_devise_token_auth_for 'User', at: '/auth'
+
   scope :api, constraints: { format: :json } do
     scope :v1 do
-      devise_for :users
       resources :users, only: [:index, :show]
     end
   end
