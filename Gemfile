@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 gem 'rails', github: "rails/rails"
-gem 'devise', '~> 3.2.0'
+gem 'devise', '~> 3.4.0'
+gem 'devise_token_auth', '~> 0.1.29'
 
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
