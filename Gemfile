@@ -4,7 +4,6 @@ gem 'rails', github: "rails/rails"
 gem 'devise', '~> 3.4.0'
 gem 'devise_token_auth', '~> 0.1.29'
 gem 'omniauth', '~> 1.2.2'
-gem 'omniauth-facebook'
 gem 'omniauth-google-oauth2'
 
 gem 'pg'

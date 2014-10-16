@@ -40,9 +40,9 @@ module Rails42
     config.devise_secret_key = ENV.fetch('RAILS42_DEVISE_SECRET_KEY', '7f007af08e2a2831cd848659c849cdea68b3f92eebe391d3e41bc94f24e1d145e1de9ef5cbfd586a7726bd8f070b438c6d40550887982f6c2931d50f792c7771')
     config.client_app_url = ENV.fetch('RAILS42_CLIENT_APP_URL', 'http://localhost:8000/')
 
-    # twitter keys - configure these in .env file,
-    #   or twitter oauth functionality will not be configured
-    config.twitter_consumer_key = ENV.fetch('RAILS42_TWITTER_CONSUMER_KEY', nil)
-    config.twitter_secret = ENV.fetch('RAILS42_TWITTER_SECRET', nil)
+    # oauth keys - configure these in .env file,
+    #   if consumer key not set, oauth functionality will not be configured for that provider
+    config.google_consumer_key = ENV.fetch('RAILS42_GOOGLE_CONSUMER_KEY', nil)
+    config.google_secret = ENV.fetch('RAILS42_GOOGLE_SECRET', nil)
   end
 end
