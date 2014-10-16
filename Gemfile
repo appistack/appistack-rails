@@ -23,7 +23,7 @@ gem 'capistrano-rails', group: :development
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
-  gem 'dotenv', '~> 1.0.2'
+  gem 'dotenv-rails'
   gem 'byebug'
   gem 'web-console', '~> 2.0.0.beta4'
   gem 'spring'
