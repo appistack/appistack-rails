@@ -5,5 +5,4 @@ class User < ActiveRecord::Base
   # TODO: fix default="", null=false in migration for username/email ...
   validates :email, format: /@/
   validates :username, length: { in: 4..20, allow_blank: true }
-  validates_uniqueness_of :username
 end
