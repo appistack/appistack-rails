@@ -32,9 +32,22 @@ module Rails42
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+
+
     config.action_mailer.default_url_options = {
       host: ENV.fetch('RAILS42_ACTION_MAILER_URL_HOST', 'localhost'),
-      port: ENV.fetch('RAILS42_ACTION_MAILER_URL_PORT', '3000'),
+      port: ENV.fetch('RAILS42_ACTION_MAILER_URL_PORT', 3000)
+    }
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.smtp_settings = {
+        user_name: ENV.fetch('RAILS42_SMTP_USERNAME', nil),
+        password: ENV.fetch('RAILS42_SMTP_PASSWORD', nil),
+        domain: ENV.fetch('RAILS42_SMTP_HELO_DOMAIN', 'localhost'),
+        address: ENV.fetch('RAILS42_SMTP_ADDRESS', nil),
+        port: ENV.fetch('RAILS42_SMTP_PORT', 587),
+        authentication: :plain, #TODO: update to not be cleartext
+        enable_starttls_auto: true
     }
 
     config.devise_secret_key = ENV.fetch('RAILS42_DEVISE_SECRET_KEY', '7f007af08e2a2831cd848659c849cdea68b3f92eebe391d3e41bc94f24e1d145e1de9ef5cbfd586a7726bd8f070b438c6d40550887982f6c2931d50f792c7771')
