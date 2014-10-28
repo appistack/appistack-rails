@@ -32,6 +32,8 @@ module Rails42
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
+    config.log_level = ENV.fetch('LOG_LEVEL', 'info').to_sym
+
     config.action_mailer.default_url_options = {
       host: ENV.fetch('RAILS42_ACTION_MAILER_URL_HOST', 'localhost'),
       port: ENV.fetch('RAILS42_ACTION_MAILER_URL_PORT', 3000)
