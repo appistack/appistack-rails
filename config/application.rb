@@ -32,8 +32,6 @@ module Rails42
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
 
-
-
     config.action_mailer.default_url_options = {
       host: ENV.fetch('RAILS42_ACTION_MAILER_URL_HOST', 'localhost'),
       port: ENV.fetch('RAILS42_ACTION_MAILER_URL_PORT', 3000)
@@ -51,6 +49,7 @@ module Rails42
     }
 
     config.devise_secret_key = ENV.fetch('RAILS42_DEVISE_SECRET_KEY', '7f007af08e2a2831cd848659c849cdea68b3f92eebe391d3e41bc94f24e1d145e1de9ef5cbfd586a7726bd8f070b438c6d40550887982f6c2931d50f792c7771')
+    config.devise_mailer_sender = ENV.fetch('RAILS42_DEVISE_MAILER_SENDER', 'registration@oscil.io')
     config.client_app_url = ENV.fetch('RAILS42_CLIENT_APP_URL', 'http://localhost:8000/')
 
     # oauth keys - configure these in .env file,
