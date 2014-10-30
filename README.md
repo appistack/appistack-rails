@@ -24,3 +24,7 @@ rake spec
 This project uses the dotenv gem to manage environment variables.  Any vars listed in the `.env` file will be
 loaded right before the content of `Rails42::Application` in `config/application.rb` is processed.  In staging
 and production environments, you'll need to make sure these vars are set.
+
+## License
+
+[MIT License](http://dcunited001.mit-license.org)
