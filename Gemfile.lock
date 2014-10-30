@@ -151,6 +151,8 @@ GEM
       omniauth (~> 1.2)
     orm_adapter (0.5.0)
     pg (0.17.1)
+    pundit (0.3.0)
+      activesupport (>= 3.0.0)
     rack (1.6.0.beta)
     rack-cors (0.2.9)
     rack-test (0.6.2)
@@ -219,6 +221,7 @@ DEPENDENCIES
   omniauth (~> 1.2.2)
   omniauth-google-oauth2
   pg
+  pundit (~> 0.3.0)
   rack-cors (~> 0.2.9)
   rails!
   rolify (~> 3.4.1)

@@ -5,7 +5,9 @@ gem 'devise', '~> 3.4.0'
 gem 'devise_token_auth', '~> 0.1.29'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
+
 gem 'rolify', '~> 3.4.1'
+gem 'pundit', '~> 0.3.0'
 
 gem 'pg'
 gem 'jbuilder', '~> 2.0'
