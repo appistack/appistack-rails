@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
 
   def as_json(opts = nil)
     # doing it this way because i don't want implementation-specific view models
-    super.merge(roles: global_roles.map {|r| r.name})
+    super.merge(roles: global_roles.map {|r| {name: r.name} })
   end
 
   def global_roles
