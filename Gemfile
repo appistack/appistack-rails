@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
-gem 'rails', github: "rails/rails"
-gem 'devise', '~> 3.4.0'
+gem 'rails', '~> 4.2.1'
+gem 'devise', '~> 3.4.1'
 gem 'devise_token_auth', '~> 0.1.29'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
