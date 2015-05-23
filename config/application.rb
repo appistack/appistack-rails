@@ -60,5 +60,18 @@ module Rails42
     #   if consumer key not set, oauth functionality will not be configured for that provider
     config.google_consumer_key = ENV.fetch('RAILS42_GOOGLE_CONSUMER_KEY', nil)
     config.google_secret = ENV.fetch('RAILS42_GOOGLE_SECRET', nil)
+
+    cors_origins = ENV.fetch('RAILS42_CORS_ORIGINS', '*')
+    config.middleware.insert_before 0, "Rack::Cors" do
+      allow do
+        origins cors_origins
+        resource '*',
+                 :headers => :any,
+                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+                 :methods => [:get, :post, :options, :delete, :put]
+
+      end
+    end
+
   end
 end
