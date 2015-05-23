@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: rails42_development
+  database: voxxel_development
 
 test:
   <<: *default
-  database: rails42_test
+  database: voxxel_test
 
 production:
   <<: *default
-  database: rails42_production
-  username: rails42
+  database: voxxel_production
+  username: voxxel
   password: <%= ENV['RAILS42_DATABASE_PASSWORD'] %>
