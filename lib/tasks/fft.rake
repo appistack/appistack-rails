@@ -1,5 +1,6 @@
-require 'lame'
-require 'fftw3'
+# TODO: fix dependencies on Heroku
+# require 'lame'
+# require 'fftw3'
 
 SOUNDS_PATH = Rails.root.join( '..', 'dg-ng', 'app', 'sounds' )
 

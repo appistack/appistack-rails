@@ -25,10 +25,6 @@ gem 'capistrano-rails', group: :development
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-#TODO: remove if unused
-gem 'lame' # brew install lame
-gem 'fftw3' # brew install fftw
-
 group :development, :test do
   gem 'dotenv-rails'
   gem 'byebug'

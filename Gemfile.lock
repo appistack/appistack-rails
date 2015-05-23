@@ -76,9 +76,6 @@ GEM
     erubis (2.7.0)
     faraday (0.9.0)
       multipart-post (>= 1.2, < 3)
-    ffi (1.9.6)
-    fftw3 (0.3)
-      narray
     globalid (0.3.5)
       activesupport (>= 4.1.0)
     hashie (3.3.1)
@@ -89,8 +86,6 @@ GEM
       multi_json (~> 1.2)
     json (1.8.2)
     jwt (1.0.0)
-    lame (0.0.4)
-      ffi
     loofah (2.0.2)
       nokogiri (>= 1.5.9)
     mail (2.6.3)
@@ -111,7 +106,6 @@ GEM
     multi_json (1.10.1)
     multi_xml (0.5.5)
     multipart-post (2.0.0)
-    narray (0.6.1.1)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
     net-ssh (2.9.1)
@@ -213,9 +207,7 @@ DEPENDENCIES
   devise (~> 3.4.1)
   devise_token_auth (~> 0.1.29)
   dotenv-rails
-  fftw3
   jbuilder (~> 2.0)
-  lame
   minitest (~> 5.4.2)
   minitest-focus
   minitest-metadata (~> 0.5.3)
