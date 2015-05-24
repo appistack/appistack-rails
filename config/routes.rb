@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   scope :api, constraints: { format: :json } do
     scope :v1 do
       resources :users, only: [:index, :show]
+      resources :artists, only: [:index, :show]
+      resources :sounds, only: [:index, :show]
     end
   end
 
