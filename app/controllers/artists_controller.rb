@@ -8,7 +8,10 @@ class ArtistsController < BaseController
   end
 
   def show
-    respond_with Artist.find(params[:id])
+    @artist = Artist.find(params[:id])
+    respond_with @artist do |format|
+      format.json { render json: @artist.to_json(include: :sounds) }
+    end
   end
 
 end
