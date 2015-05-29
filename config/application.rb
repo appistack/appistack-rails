@@ -62,7 +62,7 @@ module Rails42
     config.google_secret = ENV.fetch('RAILS42_GOOGLE_SECRET', nil)
 
     cors_origins = ENV.fetch('RAILS42_CORS_ORIGINS', '*')
-    config.middleware.insert_before 0, "Rack::Cors" do
+    config.middleware.insert_before 0, "Rack::Cors", logger: Rails.logger do
       allow do
         origins cors_origins
         resource '*',
