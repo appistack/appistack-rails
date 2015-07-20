@@ -3,7 +3,12 @@ DeviseTokenAuth.setup do |config|
   # client is responsible for keeping track of the changing tokens. Change
   # this to false to prevent the Authorization header from changing after
   # each request.
-  #config.change_headers_on_each_request = true
+
+  # NOTE: shifting tokens per request
+  # - this is easy to work with in browsers w/ angular
+  # - a bit harder in an app.  setting to false for now
+  # - causes confusing errors in mobile clients if disabled
+  config.change_headers_on_each_request = false
 
   # By default, users will need to re-authenticate after 2 weeks. This setting
   # determines how long tokens will remain valid after they are issued.
