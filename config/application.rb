@@ -69,9 +69,9 @@ module Rails42
                  :headers => :any,
                  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
                  :methods => [:get, :post, :options, :delete, :put]
-
       end
     end
 
+    # config.force_ssl = true
   end
 end
