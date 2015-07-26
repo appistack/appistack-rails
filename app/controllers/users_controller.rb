@@ -9,10 +9,10 @@ class UsersController < BaseController
     respond_with User.find(params[:id])
   end
 
-  def update;
+  def update
     @user = User.find(params[:id])
     @user.update!(user_params)
-    redirect_to @user
+    redirect_to @user, status: 303
   end
 
   private
