@@ -11,8 +11,13 @@ class UsersController < BaseController
 
   def update
     @user = User.find(params[:id])
-    @user.update!(user_params)
-    redirect_to @user, status: 303
+
+    if @user.id == current_user.id
+      @user.update!(user_params)
+      redirect_to @user, status: 303
+    else
+      render json: { status: 'error' }, status: 403
+    end
   end
 
   private
