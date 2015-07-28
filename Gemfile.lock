@@ -67,7 +67,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    devise_token_auth (0.1.31)
+    devise_token_auth (0.1.32.beta10)
       devise (~> 3.3)
       rails (~> 4.2)
     dotenv (1.0.2)
@@ -205,7 +205,7 @@ DEPENDENCIES
   capistrano-rails
   database_cleaner (~> 1.2.0)
   devise (~> 3.4.1)
-  devise_token_auth (~> 0.1.31)
+  devise_token_auth (~> 0.1.32.beta10)
   dotenv-rails
   jbuilder (~> 2.0)
   minitest (~> 5.4.2)

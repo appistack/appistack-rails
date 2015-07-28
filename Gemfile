@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 4.2.1'
 gem 'devise', '~> 3.4.1'
-gem 'devise_token_auth', '~> 0.1.31'
+gem 'devise_token_auth', '~> 0.1.32.beta10'
 gem 'omniauth', '~> 1.2.2'
 gem 'omniauth-google-oauth2'
 
