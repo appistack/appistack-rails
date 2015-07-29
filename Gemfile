@@ -13,6 +13,7 @@ gem 'pg'
 gem 'jbuilder', '~> 2.0'
 
 gem 'rack-cors', '~> 0.2.9', require: 'rack/cors'
+gem 'gravtastic', '~> 3.2.6'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
