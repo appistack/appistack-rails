@@ -2,11 +2,13 @@ class UsersController < BaseController
   respond_to :json
 
   def index
-    respond_with User.all
+    respond_with User.all.as_json(except: [:email, :uid])
   end
 
   def show
-    respond_with User.find(params[:id])
+    @user = User.find(params[:id])
+    filtered_user_fields = @user.id == current_user.id ? [] : [:email, :uid]
+    respond_with @user.as_json(except: filtered_user_fields)
   end
 
   def update
