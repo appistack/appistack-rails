@@ -33,7 +33,7 @@ module Rails42
     config.active_record.raise_in_transactional_callbacks = true
 
     # consider_requests_local displays error data on 500 results -- turn off in production
-    config.consider_all_requests_local = ENV.fetch('RAILS42_CONSIDER_REQUESTS_LOCAL', true).present?
+    config.consider_all_requests_local = ENV.fetch('RAIL42_CONSIDER_REQUESTS_LOCAL', nil) || Rails.env == "development"
     config.log_level = ENV.fetch('LOG_LEVEL', 'info').to_sym
 
     config.action_mailer.default_url_options = {
