@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: voxxel_development
+  database: appistack_development
 
 test:
   <<: *default
-  database: voxxel_test
+  database: appistack_test
 
 production:
   <<: *default
-  database: voxxel_production
-  username: voxxel
+  database: appistack_production
+  username: appistack
   password: <%= ENV['RAILS42_DATABASE_PASSWORD'] %>
