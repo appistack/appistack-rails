@@ -25,19 +25,45 @@ Heroku has some great guides on [deploying Rails 4.x applications](https://devce
 Start in the "Deploy Your Application To Heroku" section.  Additionally, you'll need to configure Heroku's Sendgrid addon 
 in order for your API to send registration and password reset emails.
 
-1. Create a Heroku Account if you don't have one and install the heroku command line toolbelt.
-1. In the root of appistack-rails, run `heroku create [myappname]` to create a new heroku app.
-  - If you instead use the Heroku web interface to create your app, you'll need to add the heroku git remote.
-1. In the Heroku web interface, open your application and click settings.  Under Config Variables, click show.
-  - Now click edit and add the name/value for the environment vars documented below.
-  - You can also set these environment variables on the command line.  Run `heroku config --help` for more information.
-1. Run `heroku addons:create sendgrid:starter` to add the Heroku Sendgrid addon.
-  - If you don't configure Sendgrid with the SMTP environment vars below, then your users will never receive their confirmation emails.
-  - Alternatively, you can create your own Sendgrid account, but you'll need to go through the Sendgrid account/domain verification process.
-1. Deploy your app with `git push heroku master`
-1. Run `heroku run rake db:migrate` on your initial deploy.
-1. Run `heroku open` to view your running API in the browser.
-  - If you've deployed a client app to Divshot and configured `RAILS42_CLIENT_APP_URL`, you'll be redirected there.  
+#### 1) Create a Heroku Account
+
+If you don't have a Heroku account already, create one.  They offer free hosting for Rails apps.  Though free instances
+limited to 18 hours per day, they're still free god bless 'em.  Also, install the [Heroku Toolbelt](https://toolbelt.heroku.com/)
+for sweet command-line action.  It's not optional.
+
+#### 2) Create a New Heroku App
+
+In the root of appistack-rails, run `heroku create [myappname]` to create a new Heroku app.  Or optionally, use the web
+interface if you like clicking things -- in which case, you'll need to add a git remote.  If you have questions, refer to the
+Heroku Rails 4.x guide linked above. 
+
+#### 3) Configure Environment Variables 
+ 
+In the Heroku web interface, open your application and click settings.  Under Config Variables, click show.
+Now click edit and add the name/value for the environment vars documented below.
+You can also set these environment variables on the command line.  Run `heroku config --help` for more information.
+
+#### 4) Setup the Heroku Sendgrid Addon
+
+Run `heroku addons:create sendgrid:starter` to add the Heroku Sendgrid addon.  If you don't configure Sendgrid with the 
+`RAILS42_SMTP` environment vars below, then your users will never receive their confirmation emails.
+
+You can also create your own Sendgrid account instead of using the Heroku Sendgrid Addon, 
+but you'll need to go through the Sendgrid account/domain verification process.  That can take a day or two.
+
+#### 5) Deploy Your API to Heroku
+
+Deploy your app with `git push heroku master`
+
+#### 6) Migrate Your Database
+
+Run `heroku run rake db:migrate` on your initial deploy.
+
+#### 7) View Your API in the Browser
+ 
+Run `heroku open` to view your running API in the browser.  You'll be redirected to `RAILS42_CLIENT_APP_URL`.  So if
+you've also deployed the Appistack Angular template or another client, you should be able to sign in.  Alternatively,
+you can test out talking with your API using a tool like Charles.
 
 ## Environment Vars
 
