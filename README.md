@@ -65,6 +65,7 @@ Emails your application sends will use these values to generate links pointing b
 
 - `RAILS42_ACTION_MAILER_URL_HOST` 
 - `RAILS42_ACTION_MAILER_URL_PORT`
+- `RAILS42_DEVISE_MAILER_SENDER` - The email address Devise should use to send registraion emails
 
 #### Sendgrid Config
 
